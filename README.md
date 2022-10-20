@@ -118,7 +118,7 @@ python3 -m pip install --upgrade twine
 #### Then upload your project ``PyPi``
 Windows
 ```
-py -m twine dist/*
+py -m twine upload dist/*
 ```
 Linux/Mac
 ```
@@ -136,5 +136,5 @@ python3 -m twine upload dist/*
 
 
 
-### References
+#### References
 https://packaging.python.org/tutorials/packaging-projects/
