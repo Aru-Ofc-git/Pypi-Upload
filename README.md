@@ -54,11 +54,11 @@ Using setup.cfg is a best practice, but you could have a dynamic setup file usin
 
 ```
 [metadata]
-name = example-pkg-YOUR-USERNAME-HERE
-version = 0.0.1
-author = Example Author
-author_email = author@example.com
-description = A small example package
+name = Your Pkage Name
+version = Your Pkage Name
+author = Author Name
+author_email = email
+description = description
 long_description = file: README.md
 long_description_content_type = text/markdown
 url = https://github.com/pypa/sampleproject
@@ -68,13 +68,11 @@ classifiers =
     Programming Language :: Python :: 3
     License :: OSI Approved :: MIT License
     Operating System :: OS Independent
-
 [options]
 package_dir =
     = src
 packages = find:
 python_requires = >=3.6
-
 [options.packages.find]
 where = src
 
