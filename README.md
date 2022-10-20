@@ -49,7 +49,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 ```
 
-# Setup.cfg setup
+## Setup.cfg setup
 Using setup.cfg is a best practice, but you could have a dynamic setup file using setup.py
 
 ```
@@ -94,6 +94,36 @@ python3 -m pip install --upgrade build
 py -m build
 ```
 
+
+## Uploading the distribution archives
+
+Finally, it’s time to upload your package to the Python Package Index!
+
+The first thing you’ll need to do is register an account on TestPyPI, which is a separate instance of the package index intended for testing and experimentation. It’s great for things like this tutorial where we don’t necessarily want to upload to the real index. To register an account, go to <a href="https://test.pypi.org/account/register/">PyPi</a> and complete the steps on that page. You will also need to verify your email address before you’re able to upload any packages. For more details, see Using TestPyPI.
+
+To securely upload your project, you’ll need a PyPI API token. Create one at <a href="https://test.pypi.org/manage/account/#api-tokens">PyPi token</a>, setting the “Scope” to “Entire account”. Don’t close the page until you have copied and saved the token — you won’t see that token again.
+
+Now that you are registered, you can use twine to upload the distribution packages. You’ll need to install Twine:
+
+### install upgraded version of pip in your desktop
+Windows
+```
+py -m pip install --upgrade twine
+```
+Linux/Mac
+```
+python3 -m pip install --upgrade twine
+```
+
+#### Then upload your project ``PyPi``
+Windows
+```
+py -m twine dist/*
+```
+Linux/Mac
+```
+python3 -m twine upload dist/*
+```
 
 
 
