@@ -90,8 +90,13 @@ python3 -m pip install --upgrade build
 
 
 ### Create the build
+Windows
 ```
 py -m build
+```
+Linux/mac
+```
+python3 -m build
 ```
 
 
